@@ -20,23 +20,30 @@ This project is a Behavior-Driven Development (BDD) test automation framework bu
 
 ## Project Structure
 
+## 📁 Project Structure
+
+```plaintext
 automationInTestingOnline/
 ├── src/
-│ ├── main/
-│ │ └── java/online/automationInTesting/App.java
-│ └── test/
-│ ├── java/online/automationInTesting/
-│ │ ├── helpers/ # Browser and Driver setup
-│ │ ├── featureFiles/ # Gherkin feature files
-│ │ ├── hooks/ # Cucumber hooks (Before/After)
-│ │ ├── pages/ # Page Object Model classes
-│ │ ├── runners/ # Cucumber test runners
-│ │ ├── stepDefinitions/ # Step definitions for features
-│ │ └── utils/ # Utility classes and config files
-│ └── resources/ # Properties and config files
-├── pom.xml # Maven dependencies
-├── target/ # Test output and reports
-└── README.md # This file
+│   ├── main/
+│   │   └── java/
+│   │       └── online/automationInTesting/
+│   │           └── App.java
+│   └── test/
+│       ├── java/
+│       │   └── online/automationInTesting/
+│       │       ├── helpers/           # Browser and Driver setup
+│       │       ├── featureFiles/      # Gherkin feature files
+│       │       ├── hooks/             # Cucumber hooks (Before/After)
+│       │       ├── pages/             # Page Object Model classes
+│       │       ├── runners/           # Cucumber test runners
+│       │       ├── stepDefinitions/   # Step definitions for features
+│       │       └── utils/             # Utility classes and config files
+│       └── resources/                 # Properties and configuration files
+├── pom.xml                            # Maven project configuration
+├── target/                            # Test output and reports
+└── README.md                          # Project documentation
+```
 
 
 ---
@@ -64,7 +71,7 @@ automationInTestingOnline/
 ### Steps
 
 1. Clone this repo:  
-   git clone https://github.com/yourusername/automationInTestingOnline.git
+   git clone https://github.com/Jqzz1607/automationInTesting.git
 2. Navigate to project directory:  
    cd automationInTestingOnline
 3. Run tests via Maven:
@@ -93,7 +100,7 @@ To validate the functional and non-functional requirements of the Shady B&B appl
 
 ### 3. Test Objectives
 
-- Confirm user can login with valid credentials and is prevented with invalid credentials.
+- Confirm user can log in with valid credentials and is prevented with invalid credentials.
 - Verify booking can be successfully completed with valid details and prevent invalid data submissions.
 - Ensure contact form submission works with valid inputs and validates invalid inputs.
 - Check UI components such as navigation bar links and page titles are visible.
@@ -196,8 +203,7 @@ To validate the functional and non-functional requirements of the Shady B&B appl
 
 If you want to contribute or have questions, reach out:
 
-- GitHub: [yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: https://github.com/Jqzz1607/automationInTesting
 
 ---
 
