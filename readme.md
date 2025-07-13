@@ -41,7 +41,7 @@ automationInTestingOnline/
 │       │       └── utils/             # Utility classes and config files
 │       └── resources/                 # Properties and configuration files
 ├── pom.xml                            # Maven project configuration
-├── target/                            # Test output and reports
+├── testReport/                        # Test output and reports
 └── README.md                          # Project documentation
 ```
 
@@ -80,7 +80,7 @@ automationInTestingOnline/
    mvn clean test -Dcucumber.filter.tags="@functionalTest"
 5. Run non-functional tests:
       mvn clean test -Dcucumber.filter.tags="@non-functionalTest"
-6. Reports will be generated in `target/` folder, including ExtentReports HTML.
+6. Reports will be generated in `testReport/` folder, including ExtentReports HTML.
 
 7. Feature files located under `src/test/java/online/automationInTesting/featureFiles` describe test scenarios.
 
