@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+
+        <!-- =========================
+             Report Theme
+        ========================== -->
+        <theme>dark</theme>
+
+        <!-- =========================
+             Encoding and Protocol
+        ========================== -->
+        <encoding>UTF-8</encoding>
+        <protocol>https</protocol>
+
+        <!-- =========================
+             Metadata
+        ========================== -->
+        <documentTitle>Automation In Testing Website - Test Report</documentTitle>
+        <reportName>Automation In Testing Website - UI Project</reportName>
+        <reportHeadline>Report for Automation In Testing Website UI Test Suite</reportHeadline>
+
+        <!-- =========================
+             Date and Time Format
+        ========================== -->
+        <dateFormat>dd-MM-yyyy</dateFormat>
+        <timeFormat>HH:mm:ss</timeFormat>
+
+        <!-- =========================
+             JavaScript Enhancements
+        ========================== -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    // Auto-expand nodes without children
+                    $('#parentWithoutNodes').prop("checked", true).click();
+
+                    // Click 'OK' on modal to enable full test count display
+                    $('#test-count-setting > div.modal-footer > a')[0].click();
+                });
+            ]]>
+        </scripts>
+
+        <!-- =========================
+             Custom Styles for Test Status
+        ========================== -->
+        <styles>
+            <![CDATA[
+                /* Passed tests - green background */
+                .test.pass {
+                    background-color: #e6ffe6 !important;
+                }
+
+                /* Failed tests - red background */
+                .test.fail {
+                    background-color: #ffe6e6 !important;
+                }
+
+                /* Skipped tests - light yellow background */
+                .test.skip {
+                    background-color: #fff8e1 !important;
+                }
+
+                /* Status badges in logs */
+                .badge.pass {
+                    background-color: #4caf50 !important;
+                }
+
+                .badge.fail {
+                    background-color: #f44336 !important;
+                }
+
+                .badge.skip {
+                    background-color: #ff9800 !important;
+                }
+
+                /* Optional: Improve font and title visibility */
+                .report-name {
+                    font-family: 'Segoe UI', sans-serif;
+                    font-weight: bold;
+                    font-size: 1.5em;
+                    color: #00bcd4;
+                }
+            ]]>
+        </styles>
+
+    </configuration>
+</extentreports>

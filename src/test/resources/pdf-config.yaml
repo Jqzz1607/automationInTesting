@@ -1,0 +1,101 @@
+# ========================================
+# Display Configuration
+# ========================================
+displayFeature: true
+displayScenario: true
+displayDetailed: true
+displayAttached: true
+displayExpanded: false
+
+# ========================================
+# Basic Status Colors
+# ========================================
+passColor: "#05A167"     # Green-ish teal for passed steps
+failColor: "#FF00FF"     # Magenta for failed steps
+skipColor: "#A89132"     # Bronze/goldenrod for skipped steps
+
+# ========================================
+# Dashboard Configuration
+# ========================================
+dashboardConfig:
+  title: "Automation In Testing Test Suites Report"
+  dataBackgroundColor: "#4F0CC8"   # Deep violet background
+  titleColor: "#FF0000"            # Red title
+  dateColor: "#969696"             # Gray date text
+  timeColor: "#000000"             # Black time text
+
+  dial:
+    featureRanges: [60, 95]        # Low to high pass thresholds
+    scenarioRanges: [70, 90]
+    stepRanges: [75, 85]
+
+    badColor: "#F768A1"            # Pink for poor performance
+    averageColor: "#93FFFF"        # Aqua for average
+    goodColor: "#32ECAB"           # Green-teal for good
+
+# ========================================
+# Summary Configurations
+# ========================================
+summaryConfig:
+  totalColor: "#FF0000"
+  durationColor: "#FF0000"
+
+tagConfig:
+  totalColor: "#FF0000"
+
+featureConfig:
+  totalColor: "#FF0000"
+  durationColor: "#FF0000"
+
+scenarioConfig:
+  totalColor: "#FF0000"
+  durationColor: "#FF0000"
+
+# ========================================
+# Detailed Feature View Configuration
+# ========================================
+detailedFeatureConfig:
+  featureNameColor: "#FF0000"
+  startEndTimeColor: "#000000"
+  tagColor: "#404040"
+  dataHeaderColor: "#FFFFFF"
+  dataBackgroundColor: "#404040"
+  totalColor: "#0000FF"
+  durationColor: "#FFFFFF"
+  durationBackgroundColor: "#404040"
+
+# ========================================
+# Detailed Scenario View Configuration
+# ========================================
+detailedScenarioConfig:
+  featureNameColor: "#404040"
+  scenarioNameColor: "#FF0000"
+  startEndTimeColor: "#000000"
+  tagColor: "#404040"
+  dataHeaderColor: "#FFFFFF"
+  dataBackgroundColor: "#404040"
+  totalColor: "#0000FF"
+  durationColor: "#FFFFFF"
+  durationBackgroundColor: "#404040"
+  stepChartBarColor: "#7F32A8"
+
+# ========================================
+# Step/Hook Level Configuration
+# ========================================
+detailedStepHookConfig:
+  stepTextColor: "#0000FF"
+  stepBackgroundColor: "#FFFFFF"
+  hookTextColor: "#00FF00"
+  hookBackgroundColor: "#FFFFFF"
+  durationColor: "#FF0000"
+  errorMsgColor: "#000000"
+  logMsgColor: "#000000"
+
+  # Uncomment to skip hooks if needed
+  # skipHooks: true
+  # skipScenarioHooks: false
+  # skipStepHooks: false
+  # skipScenarioBeforeHooks: false
+  # skipScenarioAfterHooks: false
+  # skipStepBeforeHooks: false
+  # skipStepAfterHooks: false
