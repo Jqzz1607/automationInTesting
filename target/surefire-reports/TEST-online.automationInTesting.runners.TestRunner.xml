@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="14" failures="1" name="online.automationInTesting.runners.TestRunner" time="280.669" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.10+11-LTS-240"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/abdieid/Desktop/SeleniumProjects"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/abdieid/Desktop/SeleniumProjects/automationTesting"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.10+11-LTS-240"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/h_/w6btvgwn1dg3hxx5nxwp54lh0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.8.6/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/abdieid/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.8.6/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="12.7.6"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.8.6/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/abdieid"/>
+    <property name="user.timezone" value="Africa/Mogadishu"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="abdieid"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.8.6/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -Denvironment=sit"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.10"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="environment" value="sit"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.8.6/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase classname="Admin user login" name="Valid login with correct admin credentials" time="31.401"/>
+  <testcase classname="Admin user login" name="Invalid login with incorrect password or incorrect user id #1" time="28.227"/>
+  <testcase classname="Admin user login" name="Invalid login with incorrect password or incorrect user id #2" time="27.012"/>
+  <testcase classname="Admin user login" name="Invalid login with incorrect password or incorrect user id #3" time="27.75"/>
+  <testcase classname="Booking" name="Successful single room booking" time="90.113">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at online.automationInTesting.pages.RoomReservationPage.confirmReservation(RoomReservationPage.java:58)
+	at online.automationInTesting.stepDefinations.HomePageStepDef.iShouldSeeABookingConfirmation(HomePageStepDef.java:75)
+	at ✽.I should see a booking confirmation &quot;Booking Confirmed&quot;(file:///Users/abdieid/Desktop/SeleniumProjects/automationTesting/src/test/resources/featureFiles/Booking.feature:10)
+</failure>
+    <system-out>&amp;#27;[32m[11:11:49] ✅ 🚀 Starting scenario ➜ Successful single room booking&amp;#27;[0m
+&amp;#27;[32m[11:11:49] ✅ 🌍 Test Environment ➜ sit&amp;#27;[0m
+&amp;#27;[32m[11:11:49] ✅ 🧪 Browser ➜ Chrome&amp;#27;[0m
+&amp;#27;[32m[11:11:51] ✅ 🔗 Base URL loaded ➜ https://automationintesting.online/&amp;#27;[0m
+&amp;#27;[32m[11:11:52] ✅ Navigated to URL ➜ https://automationintesting.online/&amp;#27;[0m
+&amp;#27;[32m[11:11:53] ✅ Check-in date set using JavaScript ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #booking &gt; div &gt; div &gt; div &gt; form &gt; div &gt; div:nth-child(1) &gt; div &gt; div &gt; input]&amp;#27;[0m
+&amp;#27;[32m[11:11:53] ✅ Check-out date set using JavaScript ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #booking &gt; div &gt; div &gt; div &gt; form &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; input]&amp;#27;[0m
+&amp;#27;[32m[11:11:56] ✅ Element clicked via JavaScript ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: button[class=&apos;btn btn-primary w-100 py-2&apos;]]&amp;#27;[0m
+&amp;#27;[32m[11:12:00] ✅ Element clicked via JavaScript ➜ Proxy element for: DefaultElementLocator &apos;By.cssSelector: #rooms &gt; div &gt; div.row.g-4 &gt; div:nth-child(1) &gt; div &gt; div.card-footer.bg-white.d-flex.justify-content-between.align-items-center &gt; a&apos;&amp;#27;[0m
+&amp;#27;[32m[11:12:23] ✅ Element clicked via JavaScript ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; form &gt; button.btn.btn-primary.w-100.mb-3]&amp;#27;[0m
+&amp;#27;[32m[11:12:23] ✅ ⌨️ Entered text: &quot;mike&quot; ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; form &gt; div.input-group.mb-3.room-booking-form &gt; input]&amp;#27;[0m
+&amp;#27;[32m[11:12:23] ✅ ⌨️ Entered text: &quot;mike&quot; ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; form &gt; div:nth-child(2) &gt; input]&amp;#27;[0m
+&amp;#27;[32m[11:12:24] ✅ ⌨️ Entered text: &quot;mike@gmail.com&quot; ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; form &gt; div:nth-child(3) &gt; input]&amp;#27;[0m
+&amp;#27;[32m[11:12:24] ✅ ⌨️ Entered text: &quot;07514543921&quot; ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; form &gt; div:nth-child(4) &gt; input]&amp;#27;[0m
+&amp;#27;[32m[11:12:27] ✅ 🧭 Scrolled to element ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; form &gt; button.btn.btn-primary.w-100.mb-3]&amp;#27;[0m
+&amp;#27;[32m[11:12:30] ✅ Element clicked via JavaScript ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; form &gt; button.btn.btn-primary.w-100.mb-3]&amp;#27;[0m
+&amp;#27;[32m[11:12:33] ✅ 👁️ Visibility: true ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; h2]&amp;#27;[0m
+&amp;#27;[32m[11:12:33] ✅ 🧭 Element became visible after scrolling to top ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; h2]&amp;#27;[0m
+&amp;#27;[32m[11:13:18] ✅ 📖 Read text: &quot;&quot; ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; h2]&amp;#27;[0m
+&amp;#27;[32m[11:13:19] ✅ 📸 Screenshot captured for scenario ➜ Successful single room booking&amp;#27;[0m
+&amp;#27;[32m[11:13:19] ✅ 🛑 Browser closed for scenario ➜ Successful single room booking&amp;#27;[0m
+
+</system-out>
+    <system-err>&amp;#27;[31m[11:13:18] ❌ 🚫 Element not visible ➜ [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; h2]&amp;#27;[0m
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on mac (c7307252c9b1ff2852159a4d5decd65d)] -&gt; css selector: #root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; h2] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at online.automationInTesting.pages.BasePage.waitForElementToBeVisible(BasePage.java:88)
+	at online.automationInTesting.pages.BasePage.readText(BasePage.java:162)
+	at online.automationInTesting.pages.RoomReservationPage.confirmReservation(RoomReservationPage.java:57)
+	at online.automationInTesting.stepDefinations.HomePageStepDef.iShouldSeeABookingConfirmation(HomePageStepDef.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; h2&quot;}
+  (Session info: chrome=138.0.7204.184)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.7.6&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c7307252c9b1ff2852159a4d5decd65d, findElement {value=#root-container &gt; div &gt; div.container.my-5 &gt; div &gt; div.col-lg-4 &gt; div &gt; div &gt; h2, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.184, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /var/folders/h_/w6btvgwn1dg...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58405}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58405/devtoo..., se:cdpVersion: 138.0.7204.184, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7307252c9b1ff2852159a4d5decd65d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 58 more
+</system-err>
+  </testcase>
+  <testcase classname="Verify homePG title name  Visibility" name="Validate homepage title" time="6.363"/>
+  <testcase classname="Contact Us form submission" name="Submit contact form with valid details" time="11.72"/>
+  <testcase classname="Contact Us form submission" name="Submit contact form with invalid phone" time="10.194"/>
+  <testcase classname="Verify Navigation Bar Link Visibility" name="Navbar links are visible #1" time="5.087"/>
+  <testcase classname="Verify Navigation Bar Link Visibility" name="Navbar links are visible #2" time="5.055"/>
+  <testcase classname="Verify Navigation Bar Link Visibility" name="Navbar links are visible #3" time="23.599"/>
+  <testcase classname="Verify Navigation Bar Link Visibility" name="Navbar links are visible #4" time="5.538"/>
+  <testcase classname="Verify Navigation Bar Link Visibility" name="Navbar links are visible #5" time="5.111"/>
+  <testcase classname="presence of performance API and Timing Components" name="Verify presence of Performance API and its components" time="3.499"/>
+</testsuite>

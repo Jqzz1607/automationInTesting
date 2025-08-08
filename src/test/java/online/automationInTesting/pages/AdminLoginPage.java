@@ -23,18 +23,17 @@ public class AdminLoginPage extends BasePage{
     @FindBy(id = "doLogin")
     WebElement loginButton;
 
-    @FindBy(css = ".div[role='alert']")
+    @FindBy(css = "div[role='alert']")
     WebElement loginError;
 
 
 
-
-    public AdminLoginPage login(String username, String password) {
+    public void login(String username, String password) {
 
         sendTextIntoFields(usernameField, username);
         sendTextIntoFields(passwordField, password);
         clickOnElement(loginButton);
-        return new AdminLoginPage(driver);
+
     }
 
     public void getLoginErrorMsg(String msg) {

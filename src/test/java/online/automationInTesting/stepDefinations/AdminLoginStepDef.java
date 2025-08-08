@@ -18,8 +18,8 @@ public class AdminLoginStepDef extends BasePage {
     AdminPage adminPage = PageFactory.initElements(driver, AdminPage.class);
 
 
-    @Given("I am on the login page")
-    public void iAmOnTheLoginPage() {
+    @Given("I am on the admin login page")
+    public void iAmOnTheAdminLoginPage() {
 
         homePage.navigateToHomePage();
         homePage.navigateToAdminPG();

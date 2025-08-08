@@ -2,6 +2,7 @@ package online.automationInTesting.pages;
 
 
 import online.automationInTesting.helpers.Driver;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -152,6 +153,7 @@ public class BasePage extends Driver {
             }
         } catch (Exception e) {
             report("🚫 Click failed", element, e);
+            driver.close();
         }
     }
 
@@ -273,24 +275,6 @@ public class BasePage extends Driver {
     }
 
 
-    public static void inputDateJS(WebElement dateElement, String dateValue) {
-        try {
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-
-            js.executeScript(
-                    "arguments[0].value = arguments[1]; arguments[0].dispatchEvent(new Event('change'));",
-                    dateElement,
-                    dateValue
-            );
-
-            System.out.println("📅 Date set via JavaScript: " + dateValue);
-        } catch (Exception e) {
-            System.err.println("🚫 Failed to set date via JavaScript: " + e.getMessage());
-            e.printStackTrace();
-            captureScreenshot("inputDateJS_error");
-            throw new RuntimeException("Failed to set date using JavaScript", e);
-        }
-    }
 
     /**
      * =============      Logging       =============
@@ -305,31 +289,13 @@ public class BasePage extends Driver {
             String timestamp = now();
             System.err.println(RED + "[" + timestamp + "] ❌ " + msg + " ➜ " + elementRef + RESET);
             e.printStackTrace();
-            captureScreenshot(msg.replaceAll("[^a-zA-Z0-9]", "_"));
         }
 
         private static String now() {
             return LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
         }
 
-    /**
-     * =============      Take Screenshot method      =============
-     */
 
-        public static void captureScreenshot(String reason) {
-            try {
-                TakesScreenshot ts = (TakesScreenshot) driver;
-                File src = ts.getScreenshotAs(OutputType.FILE);
-                String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-                File dest = new File("screenshots/" + reason + "_" + timestamp + ".png");
-                dest.getParentFile().mkdirs();
-                Files.copy(src.toPath(), dest.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                System.out.println(BLUE + "[INFO] Screenshot saved: " + dest.getAbsolutePath() + RESET);
-            } catch (IOException | WebDriverException e) {
-                System.err.println("[ERROR] Could not capture screenshot.");
-                e.printStackTrace();
-            }
-        }
 
     /**
      * =============     get navigation timing methods      =============

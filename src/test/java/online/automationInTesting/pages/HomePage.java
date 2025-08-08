@@ -76,7 +76,7 @@ public class HomePage extends BasePage{
 
 
 
-    public void navigateToHomePage(){
+    public void navigateToHomePage() {
         BasePage.launchUrl();
     }
 

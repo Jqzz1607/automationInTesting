@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: online.automationInTesting.runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 303.652 sec <<< FAILURE!
+Successful single room booking(Booking)  Time elapsed: 90.113 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at online.automationInTesting.pages.RoomReservationPage.confirmReservation(RoomReservationPage.java:58)
+	at online.automationInTesting.stepDefinations.HomePageStepDef.iShouldSeeABookingConfirmation(HomePageStepDef.java:75)
+	at ✽.I should see a booking confirmation "Booking Confirmed"(file:///Users/abdieid/Desktop/SeleniumProjects/automationTesting/src/test/resources/featureFiles/Booking.feature:10)
+

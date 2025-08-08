@@ -24,7 +24,7 @@ public class Hook extends Browsers {
     @Before
     public void setUp(Scenario scenario) {
         try {
-            testEnvironment = System.getProperty("env", "uat");
+            testEnvironment = System.getProperty("environment", "uat").toLowerCase();
             String browserName = new Configuration().getPropertiesParameter(testEnvironment, "browser");
 
             success("🚀 Starting scenario", scenario.getName());
@@ -42,12 +42,12 @@ public class Hook extends Browsers {
         }
     }
 
+
     @After
     public void tearDown(Scenario scenario) {
         try {
             if (driver != null) {
                 captureAndAttachScreenshot(scenario);
-                captureScreenshotForExtentReport(scenario);
                 success("📸 Screenshot captured for scenario", scenario.getName());
             }
         } catch (Exception e) {
@@ -65,30 +65,32 @@ public class Hook extends Browsers {
         }
     }
 
+
     private void captureAndAttachScreenshot(Scenario scenario) throws IOException {
+        // Capture screen shot once
         TakesScreenshot ts = (TakesScreenshot) driver;
         File src = ts.getScreenshotAs(OutputType.FILE);
-        byte[] fileContent = FileUtils.readFileToByteArray(src);
 
-        scenario.attach(fileContent, "image/png", scenario.getName());
-        captureScreenshot(scenario.getName());
-    }
-
-    private void captureScreenshotForExtentReport(Scenario scenario) throws IOException {
+        // Create filename and path using the directory from extent.properties
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
         String fileName = scenario.getName().replaceAll("[^a-zA-Z0-9]", "_") + "_" + timestamp + ".png";
-        String screenshotPath = "screenshots/" + fileName;
 
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File src = ts.getScreenshotAs(OutputType.FILE);
+        String screenshotDir = System.getProperty("screenshot.dir", "testReport/screenshots/");
+        String screenshotPath = screenshotDir + fileName;
         File destFile = new File(screenshotPath);
+        destFile.getParentFile().mkdirs();
+
+        // Save the file
         FileUtils.copyFile(src, destFile);
 
-        com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.addTestStepLog(
-                "📎 Screenshot saved at: <a href='" + destFile.getAbsolutePath() + "'>Click to view</a>"
-        );
+        // Attach to Cucumber report
+        byte[] fileContent = FileUtils.readFileToByteArray(src);
+        scenario.attach(fileContent, "image/png", scenario.getName());
+
+        // Add to Extent Report
         com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(destFile.getAbsolutePath());
     }
+
 
     private void closeBrowserSafely(Scenario scenario) {
         try {
@@ -98,4 +100,6 @@ public class Hook extends Browsers {
             report("❌ Error closing browser", scenario.getName(), e);
         }
     }
+
+
 }

@@ -1,0 +1,14 @@
+online/automationInTesting/pages/RoomsPage.class
+online/automationInTesting/runners/TestRunner.class
+online/automationInTesting/pages/AdminPage.class
+online/automationInTesting/stepDefinations/AdminLoginStepDef.class
+online/automationInTesting/pages/RoomReservationPage.class
+online/automationInTesting/stepDefinations/CustomerContactStepsDef.class
+online/automationInTesting/pages/BasePage.class
+online/automationInTesting/helpers/Browsers.class
+online/automationInTesting/hooks/Hook.class
+online/automationInTesting/stepDefinations/HomePageStepDef.class
+online/automationInTesting/pages/HomePage.class
+online/automationInTesting/helpers/Driver.class
+online/automationInTesting/pages/AdminLoginPage.class
+utils/Configuration.class

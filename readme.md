@@ -75,11 +75,12 @@ automationInTestingOnline/
 2. Navigate to project directory:  
    cd automationInTestingOnline
 3. Run tests via Maven:
-   mvn clean test
+   mvn clean test -Denvironment=sit
+   mvn clean test -Denvironment=uat -Dheadless=true
 4. Run functional tests:
-   mvn clean test -Dcucumber.filter.tags="@functionalTest"
+   mvn clean test -Dcucumber.filter.tags="@functionalTest" -Denvironment=sit
 5. Run non-functional tests:
-      mvn clean test -Dcucumber.filter.tags="@non-functionalTest"
+      mvn clean test -Dcucumber.filter.tags="@non-functionalTest" -Denvironment=sit
 6. Reports will be generated in `testReport/` folder, including ExtentReports HTML.
 
 7. Feature files located under `src/test/java/online/automationInTesting/featureFiles` describe test scenarios.

@@ -47,6 +47,13 @@
       <version>1.14.0</version>
     </dependency>
 
+    <!-- pdf requires it-->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -65,6 +72,13 @@
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-devtools-v137</artifactId> <!-- or v138 if it's published -->
       <version>4.34.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.30</version> <!-- Replace with the latest version -->
+      <scope>provided</scope>
     </dependency>
 
 
