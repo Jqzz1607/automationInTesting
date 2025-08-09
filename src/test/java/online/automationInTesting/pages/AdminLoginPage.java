@@ -27,7 +27,7 @@ public class AdminLoginPage extends BasePage{
     WebElement loginError;
 
 
-
+// loging
     public void login(String username, String password) {
 
         sendTextIntoFields(usernameField, username);
